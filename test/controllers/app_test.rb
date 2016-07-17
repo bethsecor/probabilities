@@ -24,7 +24,7 @@ class AppTest < Minitest::Test
   end
 
   def test_results
-    get '/results', params: {a: 1, b: 6, c: 3, d: 2}
+    get '/results', {a: 1, b: 6, c: 3, d: 2}
     assert last_response.ok?
     assert_equal "OR: 0.25\n", last_response.body
   end
